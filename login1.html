@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Login</title>
+    <script>
+        function login(event) {
+            event.preventDefault();
+            //         let data =[
+            //     {username: 'Admin@gmail.com', password: 'Admin@12'},
+            //      {username: 'User1@gmail.com', password: 'User@123'},
+            //       {username: 'User2@gmail.com', password: 'User@234'}
+            // ];
+            let data = JSON.parse(localStorage.getItem("registerusers"));
+            console.log(data);
+            // console.log(Object.keys(data));
+            let xv = [{useremail: "a", userpassword: "b"}];
+
+            let k = Object.keys(xv);
+            console.log(K);
+            var x = document.getElementById("usernameOrEmail").value;
+            var y = document.getElementById("password").value;
+            //   alert(x);
+            //   alert(y);
+            let result = data.find(function validateuser(userdetails) {
+                return userdetails.useremail === x && userdetails.userpassword === y;
+            });
+
+            if (result) {
+                alert('Login successful!');
+                window.location.href = "bitebox2.html";
+            }
+            else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+        // if (confirm('Are you sure you want to login?')) {
+        //     alert('You clicked OK!');
+        // } else {
+        //     alert('You clicked Cancel!');
+        // }
+
+
+
+
+    </script>
+    <title>Student Login</title>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1> Login</h1>
+
+
+        <form onsubmit="login(event)">
+
+            <label>Email</label>
+            <input type="text" id="usernameOrEmail" placeholder="Username or Email">
+            <br><br>
+
+            <label>Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"
+                pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{6,8}$"
+                title="Password must contain at least one uppercase letter, one number, one special character, and be 6 to 8 characters long."
+                required>
+            <br><br>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+            <input type="reset" value="Reset">
+            <br><br>
+            <a href="signup.html">Sign up</a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
