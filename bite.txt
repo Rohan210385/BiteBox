@@ -1,0 +1,240 @@
+<!doctype html>
+<html lan="en">
+    <html>
+        <head>
+            <title> BiteBox Ecommerce Portal</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <meta name="author" content="Rohan"/>
+            <meta name="keyword" content="data science,java,html"/>        
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+            <!--<meta http-equiv="refresh" content="10"/>-->
+          <script src="biteboxproduct.js" defer></script> 
+           
+              <style>
+          *
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+   font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+header{
+    height: 10vh;
+
+}
+main{
+    height: 80vh;
+    border: 2px solid black;
+    
+}
+footer{
+    height: 10vh;
+    border: 2px solid black;
+    
+}
+nav
+{
+display: flex;
+justify-content: space-between;
+background-color: black;
+}
+
+nav #logo {
+display: flex;
+align-items: center;
+gap:5px;
+color: white;
+}
+
+nav #logo img
+{
+width: 70px;
+height: 70px;
+border-radius: 100%;
+}
+nav #menu ul {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+padding: 20px;
+
+}
+nav #menu ul a {
+text-decoration: none;
+color: white;
+}
+
+nav #menu ul a:hover {
+color: orange;
+}
+.main_content h2{
+    text-align: center;
+
+
+}
+#product_container{
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+.card{
+
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+transition: transform 0.5s;
+
+
+}
+.card:hover{
+     transform: translateY(-5px) scale(1.02);
+}
+.product_logo{
+    height: 200px;
+    width: 100%;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    
+}
+button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+            
+
+            </style>
+ 
+            
+        </head>
+        <body>
+            <header>
+            <nav>
+                <div id="logo">
+                     <img src ="C:\Users\Rupesh Bhogale\Downloads\Gemini_Generated_Image_w2j2orw2j2orw2j2.png"/>
+                    <h3>BiteBox</h3>
+                </div>
+                <div id="menu">
+                      <ul style ="list-style-type:none">    
+                        <li><a href="bitebox.html">Home</a></li>
+                        <li><a href="bitebox.html">Contatus</a></li>
+                        <li><a href="bitebox.html">Aboutus</a></li>
+                        <li><a href="bitebox.html">cart</a></li>  
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+                    <!--<ul style ="list-style-type:square;list-style-image:url("")">-->
+                  
+             
+            </header>
+            <main>
+                <div class="main_content">
+                    <h2> Our Product </h2>
+                 <div id="product_container"></div>
+                    <!-- <div class="card">
+                        <section class="product_logo">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.uPJNhmsCGP72JL72DmMLfwHaE8?r=0&pid=Api&P=0&h=180"/>
+                            
+                        </section>
+                        <section class="Product_detail">
+                            <p> Burger </p>
+                            <p>$10</p>
+                            <button>Add</button>
+
+                        </section>
+                    </div>
+                      <div class="card">
+                        <section class="product_logo">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.JaytWyZs9bA0_WlvQkF_KQHaEJ?r=0&pid=Api&P=0&h=180"/>
+                            
+                        </section>
+                        <section class="Product_detail">
+                            <p>French Fries</p>
+                            <p>$7</p>
+                            <button>Add</button>
+
+                        </section>
+                    </div>
+                     <div class="card">
+                        <section class="product_logo">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.lAXhBbpUCvSgJEJpgCFKxgHaHa?r=0&pid=Api&P=0&h=180"/>
+                            
+                        </section>
+                        <section class="Product_detail">
+                            <p>Cold Coffee</p>
+                            <p>$20</p>
+                            <button>Add</button>
+
+                        </section>
+                     </div>
+                     <div class="card">
+                        <section class="product_logo">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.bXe2crNqUlc9xNTyuQdUhQHaHa?r=0&pid=Api&P=0&h=180"/>
+                            
+                        </section>
+                        <section class="Product_detail">
+                            <p>Puff</p>
+                            <p>$7</p>
+                            <button>Add</button>
+
+                        </section>
+                    </div> -->
+
+                    
+                    </div>
+                </div>
+                
+
+            </main>
+            <footer>
+                <div class="footer_content">
+                    <p> footer content under contruction</p>
+                </div>
+                
+
+            </footer>
+   
+
+
+        </body>
+    </html>
+    
+       
